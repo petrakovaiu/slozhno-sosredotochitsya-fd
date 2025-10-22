@@ -1,3 +1,17 @@
+:root {
+  --page-background-color: rgb(000, 002, 040);
+  --main-text-color: #fff;
+  --nav-color: #ff0070;
+  
+  --light-theme-path: url("../images/cover-image-light.png");
+  --dark-theme-path: url("../images/cover-image-dark.png");
+
+  --main-line-height: 1.3;
+  --main-text-font-family: "IBM Plex Mono", sans-serif;
+  --main-text-size: 18px;
+  --main-gap: 10px;
+  --main-ts
+}
 /*
   Переменные для вашего проекта
   и их переопределение под различные устройства
