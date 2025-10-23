@@ -1,16 +1,21 @@
 :root {
-  --page-background-color: rgb(000, 002, 040);
-  --main-text-color: #fff;
+  --main-text-color: #f1b2ce;
   --nav-color: #ff0070;
-  
+
   --light-theme-path: url("../images/cover-image-light.png");
   --dark-theme-path: url("../images/cover-image-dark.png");
 
+  --slogan-text-weight: 700;
+  --header-text-weight: 700;
+  --accent-color: ;
+  --slogan-text-line-height: 82.5%;
   --main-line-height: 1.3;
   --main-text-font-family: "IBM Plex Mono", sans-serif;
   --main-text-size: 18px;
   --main-gap: 10px;
-  --main-ts
+  --nav-gap: calc(10px * 5.5);
+
+  --button-bg: transparent;
 }
 /*
   Переменные для вашего проекта

@@ -2,21 +2,34 @@
 
 .page {
   font-family: var(--main-text-font-family);
+  background-image: var(--dark-theme-path);
   background-position: center;
-  background-repeat: no-repeat;
   background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
   background-color: var(--page-background-color);
   color: var(--main-text-color);
-
+  padding: var(--main-gap);
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--main-gap) * 4);
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
 }
 
 .header {
   block-size: 100lvh;
   min-height: 668px;
-  display: grid;
-  grid-template-rows: repeat(3, 1fr);
+  /* grid-template-rows: repeat(3, 1fr); */
   align-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column: 1 / 3;
+  grid-template-rows: 1fr max-content 1fr;
+
+  @media (width >= 768px) {
+    block-size: 100vh;
+    min-height: 768px;
+  }
 }
 
 .capitals {
@@ -46,9 +59,9 @@
   inset-block-start: 50%;
 }
 
-.decorated-zone {
+/* .decorated-zone {
   position: relative;
-}
+} */
 
 .decorated-zone::before {
   content: "";
@@ -72,6 +85,129 @@
   inset-block-end: var(--main-gap);
 }
 
-.slogan {
+.lowercase {
   text-transform: lowercase;
+}
+
+.header__theme-menu {
+  grid-row: 1;
+  grid-column: span 3;
+  inline-size: 20%;
+  display: flex;
+  justify-self: end;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header__theme-menu-list {
+  position: relative;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--main-gap);
+  inline-size: 100%;
+}
+
+.header__theme-menu-list-item {
+  align-self: center;
+  align-items: center;
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.header__theme-menu-button {
+  /* align-self: center;
+  align-items: center; */
+  color: var(--btn-text-color);
+  inline-size: 100%;
+  block-size: 100%;
+  border: var(--btn-border-default);
+  background-color: var(--button-bg);
+  text-transform: lowercase;
+}
+
+.slogan {
+  /* Для мобильных */
+  color: var(--header-bg-color);
+  grid-column: span 3;
+  grid-row: 2;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  text-shadow: 4px 4px 0 var(--accent-color);
+  line-height: var(--slogan-text-line-height);
+  font-weight: var(--slogan-text-weight);
+  align-self: center;
+  text-transform: lowercase;
+
+  @media (width >= 768px) {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+  /* Для планшета и десктопа */
+  /* clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem)  */
+}
+
+.header-text {
+  grid-column: 1/ 4;
+  grid-row: 3;
+  background-color: var(--main-text-color);
+
+  font-size: inherit;
+  display: flex;
+  justify-self: end;
+
+  @media (width >= 768px) {
+    width: 50%;
+  }
+}
+
+.title-decor {
+  background-color: var(--header-bg-color);
+  color: var(--header-text-color);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.text-blocks {
+  /* display: grid;
+  grid-template-columns: repeat(3, 1fr); */
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--main-gap) * 2);
+
+  @media (width >= 768px) {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .text-block {
+    display: flex;
+    flex-direction: column;
+    /* grid-template-columns: repeat(3, 1fr); */
+    /* grid-column: 1 / 4; */
+    gap: calc(var(--main-gap) * 2);
+  }
+}
+
+.text-block__item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--main-gap);
+  /* grid-template-columns: repeat(3, 1fr); */
+}
+
+.text-blocks__header {
+  color: var(--block-header-text-color);
+  font-size: inherit;
+  font-weight: var(--header-text-weight);
+}
+
+.text-block__subheader {
+  font-size: inherit;
+  font-weight: var(--header-text-weight);
+}
+
+.text-block__article {
 }

@@ -3,6 +3,18 @@
   здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
+:root {
+  --page-background-color: rgb(000, 002, 040);
+  --main-text-color: #f1b2ce;
+  --block-header-text-color: #ff0070;
+  --header-bg-color: #ff0070;
+  --nav-color: #ff0070;
+  --btn-text-color: #ff0070;
+  --btn-border-default: 1px solid #ff0070;
+  --btn-border-hover: 1px solid rgba(255, 0, 112, 0.4);
+  --btn-border-focus: 1px solid #ff0070;
+  --header-text-color: rgb(000, 002, 040);
+}
 
 :root.theme-dark {
   /* сохраните этот селектор в приведённом виде.
