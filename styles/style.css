@@ -85,10 +85,6 @@
   inset-block-end: var(--main-gap);
 }
 
-.lowercase {
-  text-transform: lowercase;
-}
-
 .header__theme-menu {
   grid-row: 1;
   grid-column: span 3;
@@ -116,14 +112,37 @@
 }
 
 .header__theme-menu-button {
-  /* align-self: center;
-  align-items: center; */
   color: var(--btn-text-color);
   inline-size: 100%;
   block-size: 100%;
+  text-transform: lowercase;
   border: var(--btn-border-default);
   background-color: var(--button-bg);
-  text-transform: lowercase;
+  cursor: pointer;
+  appearance: none;
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible::after {
+  content: "";
+  position: absolute;
+  inline-size: 100%;
+  block-size: 1px;
+  background-color: var(--nav-color);
+  inset-block-end: -2px;
+  inset-inline-start: 0;
+}
+
+.header__theme-menu-button:hover {
+  border: var(--btn-border-color-hover);
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--nav-color);
+  pointer-events: none;
 }
 
 .slogan {
@@ -207,6 +226,11 @@
 .text-block__subheader {
   font-size: inherit;
   font-weight: var(--header-text-weight);
+}
+
+.text-block__advice-subheader {
+  font-size: inherit;
+  font-weight: var(--advice-text-weight);
 }
 
 .text-block__article {
