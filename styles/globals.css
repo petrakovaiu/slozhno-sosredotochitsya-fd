@@ -19,7 +19,6 @@ h4,
 h5,
 h6,
 p {
-  /* font-size: 18px; */
   margin: 0;
 }
 
@@ -40,4 +39,5 @@ a {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+  text-decoration: none;
 }

@@ -1,10 +1,7 @@
 :root {
-  --main-text-color: #f1b2ce;
-  --nav-color: #ff0070;
-
   --light-theme-path: url("../images/cover-image-light.png");
   --dark-theme-path: url("../images/cover-image-dark.png");
-
+  --main-text-line-height: 23.4px;
   --slogan-text-weight: 700;
   --header-text-weight: 700;
   --accent-color: ;
@@ -16,6 +13,7 @@
   --nav-gap: calc(10px * 5.5);
 
   --button-bg: transparent;
+  --secondary-gap: calc(var(--main-gap) * 2);
 }
 /*
   Переменные для вашего проекта
