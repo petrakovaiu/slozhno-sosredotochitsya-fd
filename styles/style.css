@@ -3,7 +3,7 @@
 .page {
   font-family: var(--main-text-font-family);
   font-size: var(--main-text-size);
-  background-image: var(--dark-theme-path);
+  background-image: var(--bg-path);
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
@@ -157,6 +157,10 @@
   background-color: var(--nav-color);
   inset-block-end: -2px;
   inset-inline-start: 0;
+
+  @media (width >= 768px) {
+    inline-size: 70px;
+  }
 }
 
 .header__theme-menu-button:hover {
@@ -171,7 +175,7 @@
 .header-decor {
   color: var(--accent-color);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  text-shadow: 4px 4px 0 var(--block-header-text-color);
+  text-shadow: 4px 4px 0 var(--slogan-decor-color);
   line-height: var(--slogan-text-line-height);
   font-weight: var(--slogan-text-weight);
   text-transform: lowercase;

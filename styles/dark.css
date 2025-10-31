@@ -7,8 +7,9 @@
   --bg-path: url("../images/cover-image-dark.png");
   --page-background-color: rgb(000, 002, 040);
   --main-text-color: #f1b2ce;
+  --slogan-decor-color: #ff0070;
   --block-header-text-color: #ff0070;
-  --accent-color: #DB00FF;
+  --accent-color: #db00ff;
   --header-bg-color: #ff0070;
   --nav-color: #ff0070;
   --btn-text-color: #ff0070;
@@ -18,10 +19,15 @@
   --btn-border-focus: 1px solid #ff0070;
   --header-text-color: rgb(000, 002, 040);
   --link-shadow: 2px 1px 0 rgb(255, 0, 112);
-  --link-hover: underline solid #f1b2ce
-  --link-outline: 1px solid #F1B2CE;
+  --link-hover: underline solid #f1b2ce;
+  --link-outline: 1px solid #f1b2ce;
   --advice-text-weight: 400;
 }
+
+/* 
+ .theme-light .decorative-typography {
+  display: inline-flex;
+} */
 
 :root.theme-dark {
   /* сохраните этот селектор в приведённом виде.
