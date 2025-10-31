@@ -4,6 +4,7 @@
   переключая тему
 */
 :root {
+  --bg-path: url("../images/cover-image-dark.png");
   --page-background-color: rgb(000, 002, 040);
   --main-text-color: #f1b2ce;
   --block-header-text-color: #ff0070;

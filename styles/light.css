@@ -3,7 +3,25 @@
   Здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
-
+:root {
+  --bg-path: url("../images/cover-image-light.png");
+  --page-background-color: rgb(000, 002, 040);
+  --main-text-color: #f1b2ce;
+  --block-header-text-color: #ff0070;
+  --accent-color: #DB00FF;
+  --header-bg-color: #ff0070;
+  --nav-color: #ff0070;
+  --btn-text-color: #ff0070;
+  --btn-border-default: none;
+  --btn-border-active: 1px solid #ff0070;
+  --btn-border-color-hover: 1px solid rgb(255, 0, 112, 0.4);
+  --btn-border-focus: 1px solid #ff0070;
+  --header-text-color: rgb(000, 002, 040);
+  --link-shadow: 2px 1px 0 rgb(255, 0, 112);
+  --link-hover: underline solid #f1b2ce
+  --link-outline: 1px solid #F1B2CE;
+  --advice-text-weight: 400;
+}
 :root.theme-light {
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
