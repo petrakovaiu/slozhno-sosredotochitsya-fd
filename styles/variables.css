@@ -10,6 +10,8 @@
   --nav-gap: calc(10px * 5.5);
   --button-bg: transparent;
   --secondary-gap: calc(var(--main-gap) * 2);
+  --btn-border-default: none;
+  --advice-text-weight: 400;
 }
 /*
   Переменные для вашего проекта
