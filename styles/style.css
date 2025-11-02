@@ -182,6 +182,7 @@
   font-size: inherit;
   display: block;
   justify-self: end;
+  font-weight: var(--header-text-weight);
 
   @media (width >=768px) {
     max-inline-size: calc(50% - var(--main-gap));
