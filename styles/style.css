@@ -274,11 +274,11 @@
 }
 
 .cards {
-  grid-column: 1 / 4;
+  display: grid;
+  grid-column: 1 / 5;
   gap: var(--secondary-gap);
 
   @media (width >=1024px) {
-    display: grid;
     grid-template-columns: inherit;
     gap: var(--secondary-gap);
   }
@@ -304,6 +304,7 @@
   color: var(--block-header-text-color);
   font-weight: var(--header-text-weight);
   font-size: inherit;
+  grid-column: span 4;
 
   @media (width >=768px) {
     grid-column: 1 / 2;
