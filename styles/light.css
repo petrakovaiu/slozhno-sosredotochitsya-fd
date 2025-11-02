@@ -13,8 +13,8 @@
   --btn-border-focus: 1px solid #353430;
   --header-text-color: #353430;
   --link-shadow: 2px 1px 0 rgba(255, 141, 203, 1);
-  --link-hover: underline solid #f1b2ce;
-  --link-outline: 1px solid #f1b2ce;
+  --link-hover: 1px solid #353430;
+  --link-outline: 1px solid #010101;
 }
 
 .theme-light .decorative-typography {
@@ -24,7 +24,7 @@
 @media (prefers-color-scheme: light) {
   :root {
     --bg-path: url("../images/cover-image-light.png");
-    --page-background-color: #fff1f7;
+    /* --page-background-color: #fff1f7; */
     --main-text-color: #353430;
     --slogan-decor-color: #ff8dcb;
     --block-header-text-color: #353430;
@@ -37,7 +37,7 @@
     --btn-border-focus: 1px solid #353430;
     --header-text-color: #353430;
     --link-shadow: 2px 1px 0 rgba(255, 141, 203, 1);
-    --link-hover: underline solid #f1b2ce;
+    --link-hover: 1px solid #353430;
     --link-outline: 1px solid #f1b2ce;
   }
 

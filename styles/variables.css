@@ -33,6 +33,7 @@
   --secondary-gap: calc(var(--main-gap) * 2);
   --btn-border-default: none;
 }
+
 /*
   Переменные для вашего проекта
   и их переопределение под различные устройства
