@@ -3,7 +3,7 @@
   здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
-:root {
+:root.theme-dark {
   --bg-path: url("../images/cover-image-dark.png");
   --page-background-color: rgb(000, 002, 040);
   --main-text-color: #f1b2ce;
@@ -19,7 +19,11 @@
   --btn-border-focus: 1px solid #ff0070;
   --header-text-color: rgb(000, 002, 040);
   --link-shadow: 2px 1px 0 rgb(255, 0, 112);
-  --link-hover: underline solid #f1b2ce;
+  --link-hover: 1px solid #f1b2ce;
   --link-outline: 1px solid #f1b2ce;
   --advice-text-weight: 400;
+}
+
+.theme-dark .decorative-typography {
+  display: block;
 }

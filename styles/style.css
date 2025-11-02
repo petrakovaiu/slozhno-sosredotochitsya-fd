@@ -1,21 +1,24 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 .page {
-  font-family: var(--main-text-font-family);
+  font-family: var(--main-text-font-family), sans-serif;
   font-size: var(--main-text-size);
   background-image: var(--bg-path);
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
-  background-color: var(--page-background-color);
+  background: var(--page-background-color);
   color: var(--main-text-color);
   line-height: var(--main-text-line-height);
   display: flex;
   flex-direction: column;
   gap: calc(var(--main-gap) * 4);
 
-  @media (width >= 768px) {
+  @media (width >=768px) {
     gap: calc(var(--secondary-gap) * 3);
+
+    /* @media (prefers-color-scheme: dark) {
+    } */
   }
 }
 
@@ -29,13 +32,13 @@
   grid-template-rows: 1fr max-content 1fr;
   padding: var(--main-gap);
 
-  @media (width >= 768px) {
+  @media (width >=768px) {
     padding: var(--secondary-gap) var(--secondary-gap) var(--secondary-gap) 0;
     block-size: 100vh;
     min-height: 1024px;
   }
 
-  @media (width >= 1024px) {
+  @media (width >=1024px) {
     block-size: 100vh;
     min-height: 768px;
   }
@@ -54,7 +57,7 @@
   inset-inline-end: calc(var(--main-gap) + 28px);
   inset-block-start: calc(var(--main-gap) + 2px);
 
-  @media (width >= 768px) {
+  @media (width >=768px) {
     inset-inline-end: calc(var(--secondary-gap) + 28px);
     inset-block-start: calc(var(--secondary-gap) + 2px);
   }
@@ -68,7 +71,7 @@
   margin: -5px -20px 0 0;
   border-radius: 50%;
   box-shadow: 0 0 4px 2px var(--nav-color);
-  background-color: var(--nav-color);
+  background: var(--nav-color);
   inset-inline-end: 0;
   inset-block-start: 50%;
 }
@@ -87,7 +90,7 @@
   inset-inline-end: var(--main-gap);
   inset-block-start: var(--main-gap);
 
-  @media (width >= 768px) {
+  @media (width >=768px) {
     inset-inline-end: var(--secondary-gap);
     inset-block-start: var(--secondary-gap);
   }
@@ -103,7 +106,7 @@
   left: var(--main-gap);
   bottom: var(--main-gap);
 
-  @media (width >= 768px) {
+  @media (width >=768px) {
     inset-inline-start: var(--secondary-gap);
     inset-block-end: var(--secondary-gap);
   }
@@ -115,7 +118,7 @@
   grid-column: 3;
   justify-self: end;
 
-  @media (width >= 1024px) {
+  @media (width >=1024px) {
     margin-left: var(--secondary-gap);
     grid-column: 2;
     align-self: start;
@@ -127,7 +130,8 @@
   display: flex;
   flex-direction: column;
   gap: var(--main-gap);
-  @media (width >= 1024px) {
+
+  @media (width >=1024px) {
     flex-direction: row;
   }
 }
@@ -138,7 +142,7 @@
   block-size: 100%;
   text-transform: lowercase;
   border: var(--btn-border-default);
-  background-color: var(--button-bg);
+  background: var(--button-bg);
   cursor: pointer;
   appearance: none;
 }
@@ -147,18 +151,8 @@
   outline: none;
 }
 
-.header__theme-menu-button:focus-visible::after {
-  content: "";
-  position: absolute;
-  inline-size: 100%;
-  block-size: 1px;
-  background-color: var(--nav-color);
-  inset-block-end: -2px;
-  inset-inline-start: 0;
-
-  @media (width >= 768px) {
-    inline-size: 70px;
-  }
+.header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var(--nav-color);
 }
 
 .header__theme-menu-button:hover {
@@ -177,7 +171,8 @@
   line-height: var(--slogan-text-line-height);
   font-weight: var(--slogan-text-weight);
   text-transform: lowercase;
-  @media (width >= 768px) {
+
+  @media (width >=768px) {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 }
@@ -191,18 +186,18 @@
 .header__text {
   grid-column: 1/ 4;
   grid-row: 3;
-  background-color: var(--main-text-color);
+  background: var(--main-text-color);
   font-size: inherit;
   display: flex;
   justify-self: end;
 
-  @media (width >= 768px) {
+  @media (width >=768px) {
     max-inline-size: calc(50% - var(--main-gap));
   }
 }
 
 .title-decor {
-  background-color: var(--header-bg-color);
+  background: var(--header-bg-color);
   color: var(--header-text-color);
 }
 
@@ -211,39 +206,40 @@
   flex-direction: column;
   gap: 50px;
   padding: 0 var(--main-gap);
-  @media (width >= 768px) {
+
+  @media (width >=768px) {
     gap: calc(var(--secondary-gap) * 4);
     padding: 0 var(--secondary-gap);
   }
 }
 
-.text-blocks {
+.content-section {
   display: flex;
   flex-direction: column;
   gap: var(--secondary-gap);
 
-  @media (width >= 768px) {
+  @media (width >=768px) {
     display: grid;
     grid-template-columns: 1fr 2fr;
   }
 
-  @media (width >= 1024px) {
+  @media (width >=1024px) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-.text-blocks__advice {
+.content-section__advice {
   display: flex;
   flex-direction: column;
   gap: var(--secondary-gap);
 
-  @media (width >= 768px) {
+  @media (width >=768px) {
     flex-direction: column;
     gap: var(--secondary-gap);
   }
 
-  @media (width >= 1024px) {
+  @media (width >=1024px) {
     flex-direction: column;
     grid-column: 2 / 4;
     gap: var(--secondary-gap);
@@ -255,45 +251,35 @@
   flex-direction: column;
   gap: var(--secondary-gap);
 
-  @media (width >= 1024px) {
+  @media (width >=1024px) {
     grid-column: 2 / 4;
   }
 }
 
-.text-blocks-cards {
+.cards {
   display: flex;
   flex-direction: column;
   gap: var(--secondary-gap);
 
-  @media (width >= 768px) {
+  @media (width >=768px) {
     display: grid;
     grid-template-rows: max-content max-content;
     grid-template-columns: repeat(3, 1fr);
     grid-columns: 1 / 4;
   }
 }
+
 .link-decor {
   text-shadow: var(--link-shadow);
   cursor: pointer;
 }
 
 .link-decor:hover {
-  text-decoration: var(--link-hover);
+  border-bottom: var(--link-hover);
 }
 
 .link-decor:focus-visible {
   outline: 1px solid var(--main-text-color);
-}
-
-.text-blocks-info {
-  display: flex;
-  flex-direction: column;
-  gap: var(--secondary-gap);
-
-  @media (width >= 1024px) {
-    display: grid;
-    grid-template-rows: 1fr max-content;
-  }
 }
 
 .text-block-cards {
@@ -301,11 +287,11 @@
   flex-direction: column;
   gap: var(--secondary-gap);
 
-  @media (width >= 768px) {
+  @media (width >=768px) {
     grid-column: 1 / 4;
   }
 
-  @media (width >= 1024px) {
+  @media (width >=1024px) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--secondary-gap);
@@ -323,17 +309,19 @@
   flex-direction: column;
   gap: var(--main-gap);
 
-  @media (width >= 768px) {
+  @media (width >=768px) {
     grid-column: 2 / 3;
-  } /* grid-template-columns: repeat(3, 1fr); */
+  }
+
+  /* grid-template-columns: repeat(3, 1fr); */
 }
 
-.text-blocks__header {
+.content-section__header {
   color: var(--block-header-text-color);
   font-weight: var(--header-text-weight);
   font-size: inherit;
 
-  @media (width >= 768px) {
+  @media (width >=768px) {
     grid-column: 1 / 2;
   }
 }
@@ -353,7 +341,7 @@
   display: grid;
   gap: var(--main-gap);
 
-  @media (width >= 678px) {
+  @media (width >=678px) {
     gap: var(--secondary-gap);
   }
 }
@@ -362,7 +350,7 @@
   display: grid;
   gap: var(--main-gap);
 
-  @media (width >= 678px) {
+  @media (width >=678px) {
     grid-template-columns: repeat(3, 1fr);
     gap: var(--secondary-gap);
   }
@@ -374,7 +362,7 @@
   inline-size: 100%;
   block-size: 100%;
 
-  @media (width >= 678px) {
+  @media (width >=678px) {
     grid-column: 1/ 3;
     grid-row: 1 / 2;
   }
@@ -386,7 +374,7 @@
   inline-size: 100%;
   block-size: 100%;
 
-  @media (width >= 678px) {
+  @media (width >=678px) {
     grid-column: span 1;
     grid-row: 1 / 3;
   }
@@ -398,7 +386,7 @@
   inline-size: 100%;
   block-size: 100%;
 
-  @media (width >= 678px) {
+  @media (width >=678px) {
     grid-column: 1 / 2;
     grid-row: 2 / 4;
   }
@@ -410,7 +398,7 @@
   inline-size: 100%;
   block-size: 100%;
 
-  @media (width >= 678px) {
+  @media (width >=678px) {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
   }
@@ -422,7 +410,7 @@
   inline-size: 100%;
   block-size: 100%;
 
-  @media (width >= 678px) {
+  @media (width >=678px) {
     grid-column: 2 / 4;
     grid-row: 3 / 4;
   }
@@ -436,13 +424,13 @@
   align-content: center;
   justify-content: center;
 
-  @media (width >= 768px) {
+  @media (width >=768px) {
     padding: var(--secondary-gap);
     block-size: 100vh;
     min-height: 1024px;
   }
 
-  @media (width >= 1024px) {
+  @media (width >=1024px) {
     block-size: 100vh;
     min-height: 768px;
   }

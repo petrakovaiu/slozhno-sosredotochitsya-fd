@@ -1,17 +1,37 @@
 :root {
+  /* Color variables */
+  --bg-path: url("../images/cover-image-dark.png");
+  --page-background-color: rgb(000, 002, 040);
+  --main-text-color: #f1b2ce;
+  --slogan-decor-color: #ff0070;
+  --block-header-text-color: #ff0070;
+  --accent-color: #db00ff;
+  --header-bg-color: #ff0070;
+  --nav-color: #ff0070;
+  --btn-text-color: #ff0070;
+  --btn-border-default: none;
+  --btn-border-active: 1px solid #ff0070;
+  --btn-border-color-hover: 1px solid rgb(255, 0, 112, 0.4);
+  --btn-border-focus: 1px solid #ff0070;
+  --header-text-color: rgb(000, 002, 040);
+  --link-shadow: 2px 1px 0 rgb(255, 0, 112);
+  --link-hover: 1px solid #f1b2ce;
+  --link-outline: 1px solid #f1b2ce;
+
+  /* Typography variables */
+  --advice-text-weight: 400;
   --main-text-line-height: 23.4px;
   --slogan-text-weight: 700;
   --header-text-weight: 700;
   --slogan-text-line-height: 82.5%;
   --main-line-height: 1.3;
-  --main-text-font-family: "IBM Plex Mono", sans-serif;
+  --main-text-font-family: "IBM Plex Mono";
   --main-text-size: 18px;
   --main-gap: 10px;
   --nav-gap: calc(10px * 5.5);
   --button-bg: transparent;
   --secondary-gap: calc(var(--main-gap) * 2);
   --btn-border-default: none;
-  --advice-text-weight: 400;
 }
 /*
   Переменные для вашего проекта
